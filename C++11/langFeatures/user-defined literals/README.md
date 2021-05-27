@@ -5,19 +5,8 @@ C++ 11 ile kullanıcı tarafından tanımlanmış hazır fonksiyonlar yaratmamı
 ## Kullanımı
 
 Bir literal yaratmak için şu syntax'ı uygularız:
-T operator "" literalIsmi (...) {...}
-
-## Örnekler
-
-int operator "" _int(const char* str, std::size_t) {
-    return std::stoi(str);
-}
-int a = "123"_int; //= (int)123
-
-unsigned long long operator "" _celsToFahr(unsigned long long cels) {
-    return std::llround(cels * 1.8 + 32);
-}
-int fahr = 20_celsToFahr; // = (int)68
+    
+    T operator "" literalIsmi (...) {...}
 
 ## Kısıtlamalar
 
@@ -31,3 +20,16 @@ UDL'ler şu parametrelerle çalışabilir:
 - char32_t const*, std::size_t
 
 Return tipi herhangi bir tip olabilir.
+
+## Desteklenen Versiyonlar
+
+- gcc: 4.7
+- clang: 3.1
+- MSVC: 19.0
+- Apple clang: All
+- nvcc: 7.0
+- Intel C++: 15.0
+
+## Önerildiği Paper
+
+- N2765 - User-defined Literals, 2008. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2765.pdf

@@ -3,7 +3,7 @@ noexcept bir fonksiyon belirtecidir. Eklendiği fonksiyonun exception üretip ü
 
 Peki ürettiğinde ne olur? noexcept olarak tanımlanan bir fonksiyon'da yakalanmamış bir exception oluştuğunda bu çağrıyı std::exception'dan std::terminate'e dönüştürür. Dolayısıyla stack'inizi çözmeden programınızı durdurur. Fonksiyonu noexcept olarak tanımlamasaydık call stack'te yukarı doğru ilerleyip unhandled exception olarak programı sonlandıracaktı.
 
-## Çözdüğü Problem/ Getirdiği Güzellik
+## Çözdüğü Problem+
 - Bir çağrının noexcept olup olmadığını compile-time'da kontrol edebiliriz.
 - Call stack'imiz çözülmediğinden daha kolay debug etme imkanı sağlar.
 
@@ -16,3 +16,12 @@ noexcept(fonksiyon()): fonksiyon'un noexcept olup olmadığını söyler.
 ## Ne zaman kullanmalı?
 
 Geri dönülemez exceptionların ulaşabileceği fonksiyonlarda kullanılabilir. Eğer o fonksiyona ulaşan bir exception yakalansa bile telafisi yoksa noexcept kullanabilirsiniz.
+
+## Desteklenen Versiyonlar
+
+- gcc: 4.6
+- clang: 3.0
+- MSVC: 19.0
+- Apple clang: All
+- nvcc: 7.0
+- Intel C++: 14.0

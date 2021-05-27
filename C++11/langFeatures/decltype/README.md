@@ -3,11 +3,12 @@
 decltype ona verilen bir expression'ın declared type'ını dönen bir operatördür. Bu özelliğin asıl kullanım alanı trailing return type olarak kullanılıp, fonksiyonları auto return tipiyle tanımlamaktır.
 
 **Örnek:** 
-template \<typename X, typename Y>
-auto add(X x, Y y) -> decltype(x + y) {
-    return x + y;
-}
-add(1.0, 2);
+    
+    template \<typename X, typename Y>
+    auto add(X x, Y y) -> decltype(x + y) {
+        return x + y;
+    }
+    add(1.0, 2);
 
 Eğer ekstra bir parantez kullanılmadan T tipinde bir objeyle decltype çağrılırsa (decltype(a) gibi) başarıyla T türünü döner.
 Ekstra bir parantez eklendiyse, decltype kullanılan ifade'ye lvalue muamelesi yapılır ve dönülen tür &T olur.
