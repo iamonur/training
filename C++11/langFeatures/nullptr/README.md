@@ -19,6 +19,4 @@ nullptr boolean dışında hiçbir integral tipe çevrilemez, bool'a çevrildiğ
 
 ## Önerildiği Paper
 
-- N2431 - A name for the null pointer: nullptr (rev. 4), 2007. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2431.pdfride, if used, appears immediately after the declarator in the syntax of a member function declaration or a member function definition inside a class definition.
-
-declarator virt-specifier-seq(optional) pure-specifier(optional)	(1)	
+- N2431 - A name for the null pointer: nullptr (rev. 4), 2007. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2431.pdf
