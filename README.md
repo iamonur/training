@@ -1,1 +1,1 @@
-# asel-training
+# training
